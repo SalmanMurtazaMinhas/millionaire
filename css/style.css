@@ -41,6 +41,8 @@ body {
 
 .doors {
   display: flex;
+    background-color: #23327d6b;
+  box-shadow: 5px 5px 30px 72px #23327d6b;
 }
 
 .door {
@@ -95,12 +97,60 @@ h1 {
     color: white;
 }
 
-#game {
+#game-con {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* .nextQ{
-    height: 30px;
-    width: 50px;
-} */
+#game {
+  height: 30%;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: #23327d; */
+  background-color: #23327da2;
+  box-shadow: 5px 5px 30px 72px #23327d6b;
+
+}
+
+.nextQ{
+  width: 10%;
+  height: 6%;
+}
+
+.ans {
+  width: 40%;
+  height: 25%;
+  background-color: #23327d;
+  color: white;
+  border: 2px solid rgb(187, 163, 23);
+  border-radius: 10px;
+  margin: 5px;
+  /* box-shadow: 5px 40px 30px 72px #23327d6b; */
+  /* box-shadow: 10px 10px #23327da7; */
+
+}
+
+.question {
+  background-color: #23327d;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  min-height: 25%;
+  text-align: center;
+  font-size: 35px;
+  border: 2px solid rgb(187, 163, 23);
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 30px 72px #23327d6b; */
+
+
+
+}
