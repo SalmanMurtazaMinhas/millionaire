@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <title>Document</title>
+  <title>Slot Machine</title>
+  <script src="/js/script.js" defer></script>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    
+    <div class="question"></div>
+    <div onclick="checkAns(ans1.innerHTML,'ans1')" class="ans1"></div>
+    <div onclick="checkAns(ans2.innerHTML,'ans2')" class="ans2"></div>
+    <div onclick="checkAns(ans3.innerHTML,'ans3')" class="ans3"></div>
+    <div onclick="checkAns(ans4.innerHTML,'ans4')" class="ans4"></div>
+    <button onclick="displayQuestions()" class="nextQ" >Next</button>
 </body>
+
 </html>
