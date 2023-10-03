@@ -8,12 +8,43 @@
 </head>
 
 <body>
-    <div class="question"></div>
-    <div onclick="checkAns(ans1.innerHTML,'ans1')" class="ans1"></div>
-    <div onclick="checkAns(ans2.innerHTML,'ans2')" class="ans2"></div>
-    <div onclick="checkAns(ans3.innerHTML,'ans3')" class="ans3"></div>
-    <div onclick="checkAns(ans4.innerHTML,'ans4')" class="ans4"></div>
-    <button onclick="displayQuestions()" class="nextQ" >Next</button>
+
+    <div id="app">
+        <div class="doors">
+          <div class="door">
+            <div class="boxes">
+              <!-- <div class="box">?</div> -->
+            </div>
+          </div>
+      
+          <div class="door">
+            <div class="boxes">
+              <!-- <div class="box">?</div> -->
+            </div>
+          </div>
+        </div>
+      
+        <div class="buttons">
+          <button id="spinner">Spin</button>
+          <a href="#game"><button id="reseter">Reset </button></a>
+        </div>
+      
+        <p class="info"></p>
+      </div>
+
+      <!-- <a href="#game">GAME</a> -->
+      <div id="game">
+        <a href="#app"><button>names</button></a>
+        
+        <div class="question"></div>
+        <div onclick="checkAns(ans1.innerHTML,'ans1')" class="ans1"></div>
+        <div onclick="checkAns(ans2.innerHTML,'ans2')" class="ans2"></div>
+        <div onclick="checkAns(ans3.innerHTML,'ans3')" class="ans3"></div>
+        <div onclick="checkAns(ans4.innerHTML,'ans4')" class="ans4"></div>
+        <button onclick="displayQuestions()" class="nextQ" >Next</button>
+        
+      </div>
+
 </body>
 
 </html>
