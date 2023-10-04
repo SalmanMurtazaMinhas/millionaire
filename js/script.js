@@ -1,4 +1,10 @@
-console.log('okayyyy lesss go')
+// console.log('okayyyy lesss go')
+const introMusic = document.querySelector('#intro')
+const spinMusic = document.querySelector('#spin')
+const rightAnsMusic = document.querySelector('#right-ans')
+const wrongAnsMusic = document.querySelector('#wrong-ans')
+const BackgroundMusic = document.querySelector('#background')
+
 
 
 const question = document.querySelector('.question')
@@ -23,9 +29,25 @@ Answers: ["Yes","Sure","Yup","Of course"]
   Answers: ["Yes","Sure","Yup","Of course"]
 }]
 
-
+function resetQuestion() {
+  question.innerHTML= ''
+  ans1.innerHTML = ''
+  ans2.innerHTML = ''
+  ans3.innerHTML = ''
+  ans4.innerHTML = ''
+  ans1.style.backgroundColor = "#23327d";
+  ans2.style.backgroundColor = "#23327d";
+  ans3.style.backgroundColor = "#23327d";
+  ans4.style.backgroundColor = "#23327d";
+  BackgroundMusic.pause()
+  BackgroundMusic.currentTime = 0
+}
 
 function displayQuestions() {
+    introMusic.pause()
+    introMusic.currentTime = 0
+    BackgroundMusic.play()
+  
 
   let element = document.getElementsByTagName('div');
   console.log(element)
@@ -50,10 +72,18 @@ function displayQuestions() {
   y=[0,1,2,3]
 
   const shuffledArray = shuffle(y); 
-  ans1.innerHTML = allQuestion[0].Answers[shuffledArray[0]]
-  ans2.innerHTML = allQuestion[0].Answers[shuffledArray[1]]
-  ans3.innerHTML = allQuestion[0].Answers[shuffledArray[2]]
-  ans4.innerHTML = allQuestion[0].Answers[shuffledArray[3]]
+  setTimeout(() =>{
+    ans1.innerHTML = allQuestion[0].Answers[shuffledArray[0]]
+  },4000)
+  setTimeout(() =>{
+    ans2.innerHTML = allQuestion[0].Answers[shuffledArray[1]]
+  },6000)
+  setTimeout(() =>{
+    ans3.innerHTML = allQuestion[0].Answers[shuffledArray[2]]
+  },8000)
+  setTimeout(() =>{
+    ans4.innerHTML = allQuestion[0].Answers[shuffledArray[3]]
+  },10000)
 
   allQuestion.shift()
   
@@ -63,9 +93,15 @@ function checkAns(param, div) {
   let element = document.getElementsByClassName(div);
   if(param == 'Yes' || param == 'Sure1'){
     element[0].style.backgroundColor = "green";
+    wrongAnsMusic.pause()
+    wrongAnsMusic.currentTime = 0
+    rightAnsMusic.play()
   } 
   else {
     element[0].style.backgroundColor = "red";
+    rightAnsMusic.pause()
+    rightAnsMusic.currentTime = 0
+    wrongAnsMusic.play()
   }
 }
 
@@ -79,7 +115,13 @@ function checkAns(param, div) {
   
     const doors = document.querySelectorAll(".door");
     document.querySelector("#spinner").addEventListener("click", spin);
+    document.querySelector("#spinner").addEventListener("click", ()=>{
+      spinMusic.play()
+    });
     document.querySelector("#reseter").addEventListener("click", init);
+    document.querySelector("#reseter").addEventListener("click", ()=>{
+      introMusic.play()
+    });
   
     async function spin() {
       init(false, 1, 2);
@@ -102,7 +144,7 @@ function checkAns(param, div) {
         const boxes = door.querySelector(".boxes");
         const boxesClone = boxes.cloneNode(false);
   
-        const pool = ["👨‍💻"];
+        const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
         if (!firstInit) {
           const arr = [];
           for (let n = 0; n < (groups > 0 ? groups : 1); n++) {
