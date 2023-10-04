@@ -9,19 +9,56 @@ const ans4 = document.querySelector('.ans4')
 
 
 
-const allQuestion = [{
-question : "Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? ",
-Answers: ["Yes","Sure","Yup","Of course"]
-},{
-  question : "Are you Hungry? ",
-  Answers: ["Yes1","Sure1","Yup1","Of course1"]
-},{
-  question : "Are you Sleepy? ",
-  Answers: ["Yes1","Sure1","Yup1","Of course1"]
-},{
+const allQuestion = [
+{
+  question : "Express.js is a ____ framework. ",
+  Answers: ["Node.js","JavaScript","ejs","MongoDB"]
+},
+{
+  question : "Which database is not RDBMS database",
+  Answers : ["MYSQL","NoSQL","MongoDB","SQL Server"]
+},
+{
+  question : "Which of the following statement is used to execute the code of the sample.js file?",
+  Answers : ["sample.js","node sample.js","nodejs sample.js","None of the above."]
+},
+{
+  question : "Express.js is written in which of the following language?",
+  Answers : ["HTML","Node.js","JavaScript","Express"]
+},
+{
+  question : "Which of the following statement is correct? ",
+  Answers: ["js is Server Side Language","js is the Client Side Language","js is both Server Side and Client Side Language","None of the above"]
+},
+{
+  question : "A car maker makes many different models, but a particular car model is built only by a single car maker. what is the database relationship between car and maker? ",
+  Answers: ["One-to-one","One-to-many","Many-to-many","None of the above"]
+},
+{
+  question : "Which of the following command is used to install the Node.js express module?",
+  Answers: ["$ npm install express","$ node install express","$ install express","None of the above"]
+},
+{
+  question : "Passport is a -------- for Node.js.",
+  Answers: ["Object middleware","Database middleware","Authentication middleware","Transaction middleware"]
+},
+{
+  question : "The Node.js modules can be exposed using:",
+  Answers: ["expose","module","exports","All of the above"]
+},
+{
+  question : "",
+  Answers: ["","","",""]
+},
+{
+  question : "",
+  Answers: ["","","",""]
+},
+{
   question : "Are you Tired? ",
   Answers: ["Yes","Sure","Yup","Of course"]
-}]
+}
+]
 
 
 
