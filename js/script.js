@@ -83,12 +83,15 @@ function resetQuestion() {
 function displayQuestions() {
     introMusic.pause()
     introMusic.currentTime = 0
+
     BackgroundMusic.play()
     // question.innerHTML= ''
     ans1.innerHTML = ''
     ans2.innerHTML = ''
     ans3.innerHTML = ''
     ans4.innerHTML = ''
+
+    spinMusic.play()
 
   let element = document.getElementsByTagName('div');
   console.log(element)
@@ -116,16 +119,16 @@ function displayQuestions() {
   const shuffledArray = shuffle(y); 
   setTimeout(() =>{
     ans1.innerHTML = allQuestion[0].Answers[shuffledArray[0]]
-  },4000)
-  setTimeout(() =>{
-    ans2.innerHTML = allQuestion[0].Answers[shuffledArray[1]]
   },6000)
   setTimeout(() =>{
-    ans3.innerHTML = allQuestion[0].Answers[shuffledArray[2]]
+    ans2.innerHTML = allQuestion[0].Answers[shuffledArray[1]]
   },8000)
   setTimeout(() =>{
-    ans4.innerHTML = allQuestion[0].Answers[shuffledArray[3]]
+    ans3.innerHTML = allQuestion[0].Answers[shuffledArray[2]]
   },10000)
+  setTimeout(() =>{
+    ans4.innerHTML = allQuestion[0].Answers[shuffledArray[3]]
+  },12000)
 
   setTimeout(() =>{
   allQuestion.shift()
@@ -160,11 +163,14 @@ function checkAns(param, div) {
     const doors = document.querySelectorAll(".door");
     document.querySelector("#spinner").addEventListener("click", spin);
     document.querySelector("#spinner").addEventListener("click", ()=>{
-      spinMusic.play()
+      introMusic.play()
+      setTimeout(()=>{
+        BackgroundMusic.play()
+      },26000)
     });
     document.querySelector("#reseter").addEventListener("click", init);
     document.querySelector("#reseter").addEventListener("click", ()=>{
-      introMusic.play()
+      // BackgroundMusic.play()
     });
   
     async function spin() {
