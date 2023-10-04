@@ -10,7 +10,7 @@ const ans4 = document.querySelector('.ans4')
 
 
 const allQuestion = [{
-question : "Are you crazy? ",
+question : "Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? ",
 Answers: ["Yes","Sure","Yup","Of course"]
 },{
   question : "Are you Hungry? ",
@@ -29,10 +29,10 @@ function displayQuestions() {
 
   let element = document.getElementsByTagName('div');
   console.log(element)
-  element[1].style.backgroundColor = "white";
-  element[2].style.backgroundColor = "white";
-  element[3].style.backgroundColor = "white";
-  element[4].style.backgroundColor = "white";
+  ans1.style.backgroundColor = "#23327d";
+  ans2.style.backgroundColor = "#23327d";
+  ans3.style.backgroundColor = "#23327d";
+  ans4.style.backgroundColor = "#23327d";
 
 
   console.log(allQuestion[0].question)
