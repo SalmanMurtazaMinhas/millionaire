@@ -26,23 +26,23 @@ const allQuestion = [
 },
 {
   question : "Which of the following statement is used to execute the code of the sample.js file?",
-  Answers : ["sample.js","node sample.js","nodejs sample.js","None of the above."]
+  Answers : ["sample.js","node sample.js","nodejs sample.js","None"]
 },
 {
   question : "Express.js is written in which of the following language?",
-  Answers : ["HTML","Node.js","JavaScript","Express"]
+  Answers : ["HTML","Node","JavaScript","Express"]
 },
 {
   question : "Which of the following statement is correct? ",
-  Answers: ["js is Server Side Language","js is the Client Side Language","js is both Server Side and Client Side Language","None of the above"]
+  Answers: ["js is Server Side Language","js is the Client Side Language","js is both Server Side and Client Side Language","None"]
 },
 {
   question : "A car maker makes many different models, but a particular car model is built only by a single car maker. what is the database relationship between car and maker? ",
-  Answers: ["One-to-one","One-to-many","Many-to-many","None of the above"]
+  Answers: ["One-to-one","One-to-many","Many-to-many","None"]
 },
 {
   question : "Which of the following command is used to install the Node.js express module?",
-  Answers: ["$ npm install express","$ node install express","$ install express","None of the above"]
+  Answers: ["$ npm install express","$ node install express","$ install express","None"]
 },
 {
   question : "Passport is a -------- for Node.js.",
@@ -50,7 +50,7 @@ const allQuestion = [
 },
 {
   question : "The Node.js modules can be exposed using:",
-  Answers: ["expose","module","exports","All of the above"]
+  Answers: ["expose","module","exports","None"]
 },
 {
   question : "",
