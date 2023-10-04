@@ -84,7 +84,13 @@ function displayQuestions() {
     introMusic.pause()
     introMusic.currentTime = 0
     BackgroundMusic.play()
-  
+    // question.innerHTML= ''
+    ans1.innerHTML = ''
+    ans2.innerHTML = ''
+    ans3.innerHTML = ''
+    ans4.innerHTML = ''
+
+    spinMusic.play()
 
   let element = document.getElementsByTagName('div');
   console.log(element)
