@@ -33,36 +33,36 @@ const allQuestion = [
   Answers : ["HTML","Node","JavaScript","Express"]
 },
 {
-  question : "Which of the following statement is correct? ",
-  Answers: ["js is Server Side Language","js is the Client Side Language","js is both Server Side and Client Side Language","None"]
-},
-{
   question : "A car maker makes many different models, but a particular car model is built only by a single car maker. what is the database relationship between car and maker? ",
   Answers: ["One-to-one","One-to-many","Many-to-many","None"]
+},
+{
+  question : "Which of the following statement is correct? ",
+  Answers: ["JS is Server Side Language","JS is the Client Side Language","JS is both Server Side and Client Side Language","None"]
 },
 {
   question : "Which of the following command is used to install the Node.js express module?",
   Answers: ["$ npm install express","$ node install express","$ install express","None"]
 },
 {
+  question : "MongoDB stores documents in _.",
+  Answers: ["Store","Collections","Indexes","None"]
+},
+{
   question : "Passport is a -------- for Node.js.",
   Answers: ["Object middleware","Database middleware","Authentication middleware","Transaction middleware"]
 },
 {
-  question : "The Node.js modules can be exposed using:",
-  Answers: ["expose","module","exports","None"]
+  question : "Which of the following shortcut command is used to kill a process in Node.js?",
+  Answers: ["Using Config file","Using database","Using app.locals","Using app.storage"]
 },
 {
-  question : "",
-  Answers: ["","","",""]
+  question : "How to connect to MongoDB using Mongoose?",
+  Answers: ["mongodb.connect()","mongodb.require()","mongoose.connect()","mongoose.require()"]
 },
 {
-  question : "",
-  Answers: ["","","",""]
-},
-{
-  question : "Are you Tired? ",
-  Answers: ["Yes","Sure","Yup","Of course"]
+  question : "Which of the following shortcut command is used to kill a process in Node.js?",
+  Answers: ["Ctrl + B","Ctrl + V","Ctrl + C","Ctrl + D"]
 }
 ]
 
@@ -135,7 +135,7 @@ function displayQuestions() {
 
 function checkAns(param, div) {
   let element = document.getElementsByClassName(div);
-  if(param == 'Node.js' || param == 'NoSQL' || param == 'node sample.js' || param == 'JavaScript' || param == 'js is Server Side Language' || param == 'One-to-many' || param == '$ npm install express' || param == 'Authentication middleware' || param == 'exports' || param == 'Sure1' || param == 'Sure1' || param == 'Sure1'){
+  if(param == 'Node.js' || param == 'NoSQL' || param == 'node sample.js' || param == 'JavaScript' || param == 'js is Server Side Language' || param == 'One-to-many' || param == '$ npm install express' || param == 'Authentication middleware' || param == 'Collections' || param == 'Using app.storage' || param == 'mongoose.connect()' || param == 'Ctrl + C'){
     element[0].style.backgroundColor = "green";
     wrongAnsMusic.pause()
     wrongAnsMusic.currentTime = 0
