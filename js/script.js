@@ -18,7 +18,7 @@ const ans4 = document.querySelector('.ans4')
 const allQuestion = [
 {
   question : "Express.js is a ____ framework. ",
-  Answers: ["Node.js","JavaScript","ejs","MongoDB"]
+  Answers: ["Node.js","JavaScript (js)","ejs","MongoDB"]
 },
 {
   question : "Which database is not RDBMS database",
@@ -84,7 +84,11 @@ function displayQuestions() {
     introMusic.pause()
     introMusic.currentTime = 0
     BackgroundMusic.play()
-  
+    // question.innerHTML= ''
+    ans1.innerHTML = ''
+    ans2.innerHTML = ''
+    ans3.innerHTML = ''
+    ans4.innerHTML = ''
 
   let element = document.getElementsByTagName('div');
   console.log(element)
@@ -98,6 +102,7 @@ function displayQuestions() {
   console.log(allQuestion[0].Answers)
   
   question.innerHTML=allQuestion[0].question
+
   const shuffle = (array) => { 
     for (let i = array.length - 1; i > 0; i--) { 
       const j = Math.floor(Math.random() * (i + 1)); 
@@ -122,13 +127,15 @@ function displayQuestions() {
     ans4.innerHTML = allQuestion[0].Answers[shuffledArray[3]]
   },10000)
 
+  setTimeout(() =>{
   allQuestion.shift()
+  },12000)
   
 }
 
 function checkAns(param, div) {
   let element = document.getElementsByClassName(div);
-  if(param == 'Yes' || param == 'Sure1'){
+  if(param == 'Node.js' || param == 'NoSQL' || param == 'node sample.js' || param == 'JavaScript' || param == 'js is Server Side Language' || param == 'One-to-many' || param == '$ npm install express' || param == 'Authentication middleware' || param == 'exports' || param == 'Sure1' || param == 'Sure1' || param == 'Sure1'){
     element[0].style.backgroundColor = "green";
     wrongAnsMusic.pause()
     wrongAnsMusic.currentTime = 0
@@ -181,7 +188,8 @@ function checkAns(param, div) {
         const boxes = door.querySelector(".boxes");
         const boxesClone = boxes.cloneNode(false);
   
-        const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
+        // const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
+        const pool = ["🪙"];
         if (!firstInit) {
           const arr = [];
           for (let n = 0; n < (groups > 0 ? groups : 1); n++) {
