@@ -15,19 +15,56 @@ const ans4 = document.querySelector('.ans4')
 
 
 
-const allQuestion = [{
-question : "Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? Are you crazy? ",
-Answers: ["Yes","Sure","Yup","Of course"]
-},{
-  question : "Are you Hungry? ",
-  Answers: ["Yes1","Sure1","Yup1","Of course1"]
-},{
-  question : "Are you Sleepy? ",
-  Answers: ["Yes1","Sure1","Yup1","Of course1"]
-},{
-  question : "Are you Tired? ",
-  Answers: ["Yes","Sure","Yup","Of course"]
-}]
+const allQuestion = [
+{
+  question : "Express.js is a ____ framework. ",
+  Answers: ["Node.js","JavaScript (js)","ejs","MongoDB"]
+},
+{
+  question : "Which database is not RDBMS database",
+  Answers : ["MYSQL","NoSQL","MongoDB","SQL Server"]
+},
+{
+  question : "Which of the following statement is used to execute the code of the sample.js file?",
+  Answers : ["sample.js","node sample.js","nodejs sample.js","None"]
+},
+{
+  question : "Express.js is written in which of the following language?",
+  Answers : ["HTML","Node","JavaScript","Express"]
+},
+{
+  question : "A car maker makes many different models, but a particular car model is built only by a single car maker. what is the database relationship between car and maker? ",
+  Answers: ["One-to-one","One-to-many","Many-to-many","None"]
+},
+{
+  question : "Which of the following statement is correct? ",
+  Answers: ["JS is Server Side Language","JS is the Client Side Language","JS is both Server Side and Client Side Language","None"]
+},
+{
+  question : "Which of the following command is used to install the Node.js express module?",
+  Answers: ["$ npm install express","$ node install express","$ install express","None"]
+},
+{
+  question : "MongoDB stores documents in _.",
+  Answers: ["Store","Collections","Indexes","None"]
+},
+{
+  question : "Passport is a -------- for Node.js.",
+  Answers: ["Object middleware","Database middleware","Authentication middleware","Transaction middleware"]
+},
+{
+  question : "Which of the following shortcut command is used to kill a process in Node.js?",
+  Answers: ["Using Config file","Using database","Using app.locals","Using app.storage"]
+},
+{
+  question : "How to connect to MongoDB using Mongoose?",
+  Answers: ["mongodb.connect()","mongodb.require()","mongoose.connect()","mongoose.require()"]
+},
+{
+  question : "Which of the following shortcut command is used to kill a process in Node.js?",
+  Answers: ["Ctrl + B","Ctrl + V","Ctrl + C","Ctrl + D"]
+}
+]
 
 function resetQuestion() {
   question.innerHTML= ''
@@ -46,8 +83,15 @@ function resetQuestion() {
 function displayQuestions() {
     introMusic.pause()
     introMusic.currentTime = 0
+
+    BackgroundMusic.play()
+    // question.innerHTML= ''
+    ans1.innerHTML = ''
+    ans2.innerHTML = ''
+    ans3.innerHTML = ''
+    ans4.innerHTML = ''
+
     spinMusic.play()
-  
 
   let element = document.getElementsByTagName('div');
   console.log(element)
@@ -61,6 +105,7 @@ function displayQuestions() {
   console.log(allQuestion[0].Answers)
   
   question.innerHTML=allQuestion[0].question
+
   const shuffle = (array) => { 
     for (let i = array.length - 1; i > 0; i--) { 
       const j = Math.floor(Math.random() * (i + 1)); 
@@ -85,13 +130,15 @@ function displayQuestions() {
     ans4.innerHTML = allQuestion[0].Answers[shuffledArray[3]]
   },12000)
 
+  setTimeout(() =>{
   allQuestion.shift()
+  },12000)
   
 }
 
 function checkAns(param, div) {
   let element = document.getElementsByClassName(div);
-  if(param == 'Yes' || param == 'Sure1'){
+  if(param == 'Node.js' || param == 'NoSQL' || param == 'node sample.js' || param == 'JavaScript' || param == 'js is Server Side Language' || param == 'One-to-many' || param == '$ npm install express' || param == 'Authentication middleware' || param == 'Collections' || param == 'Using app.storage' || param == 'mongoose.connect()' || param == 'Ctrl + C'){
     element[0].style.backgroundColor = "green";
     wrongAnsMusic.pause()
     wrongAnsMusic.currentTime = 0
@@ -147,7 +194,8 @@ function checkAns(param, div) {
         const boxes = door.querySelector(".boxes");
         const boxesClone = boxes.cloneNode(false);
   
-        const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
+        // const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
+        const pool = ["🪙"];
         if (!firstInit) {
           const arr = [];
           for (let n = 0; n < (groups > 0 ? groups : 1); n++) {
