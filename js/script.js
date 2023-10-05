@@ -193,7 +193,7 @@ function checkAns(param, div) {
         const boxes = door.querySelector(".boxes");
         const boxesClone = boxes.cloneNode(false);
   
-         const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
+         const pool = ["?"];
         // const pool = ["🪙"];
         if (!firstInit) {
           const arr = [];
