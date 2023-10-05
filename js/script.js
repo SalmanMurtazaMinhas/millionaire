@@ -18,7 +18,7 @@ const ans4 = document.querySelector('.ans4')
 const allQuestion = [
 {
   question : "Express.js is a ____ framework. ",
-  Answers: ["Node.js","JavaScript (js)","ejs","MongoDB"]
+  Answers: ["Node.js","JavaScript (js)","ejs","Mongo"]
 },
 {
   question : "Which database is not RDBMS database",
