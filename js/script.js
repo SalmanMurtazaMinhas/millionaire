@@ -53,7 +53,7 @@ const allQuestion = [
   Answers: ["Object middleware","Database middleware","Authentication middleware","Transaction middleware"]
 },
 {
-  question : "Which of the following shortcut command is used to kill a process in Node.js?",
+  question : "What is the way to store local variables that can be accessed within the application?",
   Answers: ["Using Config file","Using database","Using app.locals","Using app.storage"]
 },
 {
@@ -83,7 +83,6 @@ function resetQuestion() {
 function displayQuestions() {
     introMusic.pause()
     introMusic.currentTime = 0
-
     BackgroundMusic.play()
     // question.innerHTML= ''
     ans1.innerHTML = ''
@@ -138,7 +137,7 @@ function displayQuestions() {
 
 function checkAns(param, div) {
   let element = document.getElementsByClassName(div);
-  if(param == 'Node.js' || param == 'NoSQL' || param == 'node sample.js' || param == 'JavaScript' || param == 'js is Server Side Language' || param == 'One-to-many' || param == '$ npm install express' || param == 'Authentication middleware' || param == 'Collections' || param == 'Using app.storage' || param == 'mongoose.connect()' || param == 'Ctrl + C'){
+  if(param == 'Node.js' || param == 'MongoDB' || param == 'node sample.js' || param == 'JavaScript' || param == 'JS is both Server Side and Client Side Language' || param == 'One-to-many' || param == '$ npm install express' || param == 'Authentication middleware' || param == 'Collections' || param == 'Using app.locals' || param == 'mongoose.connect()' || param == 'Ctrl + C'){
     element[0].style.backgroundColor = "green";
     wrongAnsMusic.pause()
     wrongAnsMusic.currentTime = 0
