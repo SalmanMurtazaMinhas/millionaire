@@ -193,8 +193,8 @@ function checkAns(param, div) {
         const boxes = door.querySelector(".boxes");
         const boxesClone = boxes.cloneNode(false);
   
-        // const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
-        const pool = ["🪙"];
+         const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
+        // const pool = ["🪙"];
         if (!firstInit) {
           const arr = [];
           for (let n = 0; n < (groups > 0 ? groups : 1); n++) {
